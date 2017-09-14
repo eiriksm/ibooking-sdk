@@ -1,6 +1,9 @@
 {
   "name": "nymediaas/ibooking-sdk",
   "description": "Ibooking sdk",
+  "autoload": {
+    "psr-4": {"Nymediaas\\IbookingSdk\\": "src"}
+  },
   "require": {
     "guzzlehttp/guzzle": "*"
   }
