@@ -1,0 +1,7 @@
+{
+  "name": "nymediaas/ibooking-sdk",
+  "description": "Ibooking sdk",
+  "require": {
+    "guzzlehttp/guzzle": "*"
+  }
+}
