@@ -29,6 +29,16 @@ class IbookingClient {
     return $body->authToken;
   }
 
+  public function cancelBooking($token, $class_id) {
+    $path = 'Schedule/cancelBooking';
+    $response = $this->apiCall($path, 'POST', array(
+      'token' => $token,
+      'classId' => $class_id,
+    ));
+    $body = $this->getJson($response);
+    return $body;
+  }
+
   public function getBookings($token, $limit = 60) {
     $path = 'User/getBookings';
     $response = $this->apiCall($path, 'GET', array(
