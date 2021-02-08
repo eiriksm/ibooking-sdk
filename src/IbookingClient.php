@@ -39,6 +39,22 @@ class IbookingClient {
     return $body;
   }
 
+  /**
+   * @param $token
+   * @param $class_id
+   *
+   * @return mixed
+   */
+  public function removeBooking($token, $class_id) {
+    $path = 'ResourceBooking/removeBooking';
+    $response = $this->apiCall($path, 'POST', array(
+      'token' => $token,
+      'id' => $class_id,
+    ));
+    $body = $this->getJson($response);
+    return $body;
+  }
+
   public function getBookings($token, $limit = 60) {
     $path = 'User/getBookings';
     $response = $this->apiCall($path, 'GET', array(
